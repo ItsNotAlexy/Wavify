@@ -1,0 +1,104 @@
+.content-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    flex-direction: column;
+}
+.subcontent-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 20vh;
+}
+.cards-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.card {
+    margin: 10px;
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+    width: 300px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.card i {
+    font-size: 3em;
+    margin-bottom: 10px;
+}
+.card img {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 10px;
+}
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+.card-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    margin-top: 20px;
+}
+.card-title {
+    font-size: 1.5em;
+    text-align: center;
+}
+.card-headline {
+    font-size: 0.9em;
+    text-align: center;
+}
+.card-subtitle {
+    font-size: 1em;
+    text-align: center;
+}
+.img-round {
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+.title-big {
+    font-size: 3em;
+    text-align: center;
+}
+.subtitle-big {
+    font-size: 2em;
+    text-align: center;
+}
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 15vh;
+    flex-direction: column;
+}
+.footer-text {
+    margin-top: 10px;
+}
+.outline:hover {
+    background-color: #029AE8;
+    color: #fff;
+}
+
+@media (max-width: 768px) {
+    .content-center {
+        height: 80vh;
+    }
+    .title-big {
+        font-size: 2em;
+    }
+    .subtitle-big {
+        font-size: 1.5em;
+    }
+}

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Wavify | Music Player</title>
+    <link rel="shortcut icon" href="{{ url_for('static', filename='/images/logo.png') }}" type="image/x-icon">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:title" content="Wavify">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Wavify">
+    <meta property="og:description" content="Explore ad-free music with Wavify">
+    <meta name="description" content="Explore ad-free music with Wavify">
+    <meta name="og:url" content="https://music.lunes.host">
+    <meta name="theme-color" content="#fbcf59">
+    <meta property="og:image:width" content="627">
+    <meta property="og:image:height" content="627">
+    <meta name="keywords" content="music wavify lunes">
+    <meta name="author" content="Wavify">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.blue.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='player.css') }}">
+    <script src="{{ url_for('static', filename='/scripts/search.js') }}"></script>
+</head>
+<body>
+    <div class="content-center">
+        <form action="/search" method="post" class="search-form">
+            <label for="search_query">Search:</label>
+            <input type="text" id="search_query" name="search_query" required>
+            <button type="submit">Search</button>
+        </form>
+    
+        {% if results is not none %}
+        <div class="content-center">
+            <div id="audioPlayerContainer"></div>
+    
+            <ul class="song-list">
+                {% for result in results %}
+                <li class="song-item">
+                    <div class="song-details">
+                        <h2 class="song-title" data-yt-id="{{ result.yt_id }}" data-title="{{ result.title }}" onclick="almostPlaySong('{{ result.yt_id }}', '{{ result.title }}')">{{ result.title }}</h2>
+                        <p class="song-duration">Duration: {{ result.duration }}</p>
+                        <p class="song-artist">Artist: {{ result.artist }}</p>
+                    </div>
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+        {% endif %}
+    </div>
+    <div class="alert" id="alert">
+        <i class="bi bi-info-circle"></i>
+        <span id="alertMessage"></span>
+    </div>
+</body>
+</html>
