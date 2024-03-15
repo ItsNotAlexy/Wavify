@@ -21,7 +21,9 @@ To get started with Wavify, follow these steps:
 
 1. Clone the repository: `git clone https://github.com/ItsNotAlexy/wavify.git`
 2. Install dependencies: `python -m pip install -r requirements.txt`
-3. Start the development server: `python main.py`
+3. Create your database in the `database` directory
+4. Change the `config.py.template` file into your configurations and then renaming it to `config.py`
+5. Start the development server: `python main.py`
 
 ## Contributing
 
