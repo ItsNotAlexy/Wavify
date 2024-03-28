@@ -32,3 +32,10 @@ Contributions are welcome! If you'd like to contribute to Wavify, please follow 
 - Fork the repository and create a new branch.
 - Make your changes and ensure they adhere to the project's coding standards.
 - Submit a pull request detailing the changes you've made.
+
+## Contributors
+
+This project will never be possible without the help of our contributors.
+
+- @ItsNotAlexy / Core Developer (Frontend Development)
+- @DWAA / Core Developer (Backend Service)
