@@ -39,3 +39,4 @@ This project will never be possible without the help of our contributors.
 
 - @ItsNotAlexy / Core Developer (Frontend Development)
 - @DWAA / Core Developer (Backend Service)
+- @Chriz / Graphics Designer
